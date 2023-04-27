@@ -10,6 +10,10 @@ def index(request):
         'movies': Movie.objects.all(),
     })
 
+def movie_list(request):
+    return render(request, 'movie_list.html', {
+        'movies': Movie.objects.all(),
+    })
 
 def add_movie(request):
     if request.method == "POST":

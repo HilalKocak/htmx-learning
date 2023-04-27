@@ -14,9 +14,9 @@
       <th></th>
     </tr>
   </thead>
-  <tbody>
- 
-    {% include 'movie_list.html' %}
+  
+  <tbody hx-get="{% url 'movie_list' %}">
+  <tr><td>Loading..</td></tr>
   </tbody>
 </table>
 <a href="{% url 'add_movie' %}" class="btn btn-primary">
