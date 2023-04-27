@@ -15,11 +15,11 @@
     </tr>
   </thead>
   
-  <tbody hx-get="{% url 'movie_list' %}">
+  <tbody hx-get="{% url 'movie_list' %}" hx-trigger="load">
   <tr><td>Loading..</td></tr>
   </tbody>
 </table>
-<a href="{% url 'add_movie' %}" class="btn btn-primary">
+<button type="button" hx-get="{% url 'add_movie' %}" class="btn btn-primary" hx-target="#dialog">
   Add a movie
-</a>
+</button>
 {% endblock %}
